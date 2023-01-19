@@ -25,9 +25,9 @@ object ext {
   }
   def main(args: Array[String]): Unit = {
     val o:FM[Int] = Some(4)
-    val mfm = useFM(o, x => Some(x+1)).inner().asInstanceOf[Option[Int]]
+    val mfm = useFM(o, (x:Int) => Some(x+1)).inner().asInstanceOf[Option[Int]]
     println(mfm.get)
-    val mfmm = useFMM(o, x=>x+3).inner().asInstanceOf[Option[Int]]
+    val mfmm = useFMM(o, (x:Int)=>x+3).inner().asInstanceOf[Option[Int]]
     println(mfmm.get)
   }
 

@@ -17,9 +17,9 @@ object ext1 {
   def main(args: Array[String]): Unit = {
     val o = Some(4)
     val o2 = Some(7)
-    println(map2(o, o2, _ + _))
+    println(map2(o, o2, (x: Int, y: Int) => x + y))
     val o3:Option[Int] = None
-    println(map2(o, o3, _ + _))
+    println(map2(o, o3, (x: Int, y: Int) => x + y))
   }
 
 }
